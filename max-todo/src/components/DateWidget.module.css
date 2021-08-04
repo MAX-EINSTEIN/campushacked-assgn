@@ -1,0 +1,24 @@
+.optGroup {
+  display: flex;
+}
+
+.optGroup * {
+  color: var(--color-accent);
+  border: 0.04rem solid var(--color-accent);
+  background: var(--color-primary);
+  padding: 0.1rem 0.4rem;
+}
+
+.optGroup button {
+  font-size: 0.75rem;
+}
+
+.optGroup button:nth-child(1) {
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+}
+
+.optGroup input {
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}

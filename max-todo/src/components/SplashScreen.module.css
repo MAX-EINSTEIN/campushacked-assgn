@@ -1,0 +1,22 @@
+/* .component {
+  height: 100vh;
+} */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  width: 10rem;
+  height: 10rem;
+}
+
+.heading {
+  color: var(--color-accent);
+  font-weight: 600;
+}

@@ -1,0 +1,57 @@
+.TodoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  width: 100%;
+  background: var(--color-primary);
+  font-family: monospace;
+  border-radius: 0.125rem;
+}
+
+.left {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.btn {
+  background: transparent;
+  color: var(--color-text);
+  border: none;
+  font-weight: 700;
+  font-family: monospace;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.inputText {
+  background: transparent;
+  border: none;
+  flex: auto;
+}
+
+.inputText:focus {
+  outline: none;
+}
+
+.inputCheck {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.completed {
+  color: gray;
+  text-decoration: line-through;
+}

@@ -1,0 +1,45 @@
+.TodoDetail {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 0.5rem;
+  background: var(--color-primary);
+}
+
+.leftColumn {
+  flex: 1;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.componentWithLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.deleteBtnDiv {
+  text-align: right;
+}
+
+.deleteBtn {
+  font-size: 0.88rem;
+  color: var(--color-primary);
+  background: orangered;
+  padding: 0.15rem 0.6rem;
+  border-radius: 0.25rem;
+  border-color: red;
+}
+
+.deleteBtn:active {
+  background: red;
+}
+
+.priorityDropDown {
+  height: 1.6rem;
+}

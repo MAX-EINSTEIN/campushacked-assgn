@@ -1,0 +1,24 @@
+.TodoList {
+  display: grid;
+  place-items: center center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.layerBack {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  background: blue;
+}
+
+.list {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0.8rem;
+  width: 32rem;
+}
