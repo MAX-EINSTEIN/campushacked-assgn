@@ -47,10 +47,6 @@
   margin: 0;
 }
 
-.hidden {
-  display: none;
-}
-
 .completed {
   color: gray;
   text-decoration: line-through;

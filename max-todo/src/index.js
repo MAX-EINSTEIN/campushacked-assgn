@@ -4,14 +4,14 @@ import './index.css';
 // import Todo from './components/Todo';
 import TodoList from './components/TodoList';
 // import SplashScreen from './components/SplashScreen';
-// import App from './App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
+    <App />
     {/* <SplashScreen/> */}
-    <TodoList />
+    {/* <TodoList /> */}
     {/* <Todo /> */}
   </React.StrictMode>,
   document.getElementById('root')

@@ -2,7 +2,7 @@ import * as styles from './TodoDetail.module.css';
 
 import DateWidget from './DateWidget';
 
-const TodoDetail = () => {
+const TodoDetail = ({ data, deleteTodoItem, setDate }) => {
   return (
     <div className={styles.TodoDetail}>
       <div className={styles.leftColumn}>
@@ -14,7 +14,7 @@ const TodoDetail = () => {
       <div className={styles.rightColumn}>
         <div className={`${styles.dateCWL} ${styles.componentWithLabel}`}>
           Date
-          <DateWidget />
+          <DateWidget data={data} setDate={setDate} />
         </div>
         <div className={`${styles.priorityCWL} ${styles.componentWithLabel}`}>
           Priority
@@ -24,7 +24,7 @@ const TodoDetail = () => {
             <option>High</option>
           </select>
         </div>
-        <div className={`${styles.deleteBtnDiv}`}><button className={`${styles.deleteBtn}`}>Delete</button></div>
+        <div className={`${styles.deleteBtnDiv}`}><button className={`${styles.deleteBtn}`} onClick={() => deleteTodoItem(data.id)}>Delete</button></div>
       </div>
     </div >
   );

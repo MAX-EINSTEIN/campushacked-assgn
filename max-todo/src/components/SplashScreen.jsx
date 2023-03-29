@@ -3,12 +3,10 @@ import * as styles from './SplashScreen.module.css';
 
 const SplashScreen = () => {
   return (
-    <div className={styles.component}>
-      <div className={styles.content}>
-        <img src={brandLogo} className={styles.logo} alt="logo" />
-        <h2 className={styles.heading}>No tasks found</h2>
-        <h5>You can add task using the + above.</h5>
-      </div>
+    <div className={styles.content}>
+      <img src={brandLogo} className={styles.logo} alt="logo" />
+      <h2 className={styles.heading}>No tasks found</h2>
+      <h5>You can add task using the + above.</h5>
     </div>
   );
 };

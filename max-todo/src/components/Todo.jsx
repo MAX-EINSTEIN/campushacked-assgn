@@ -1,13 +1,11 @@
 import { useState } from 'react';
-
 import TodoDetail from './TodoDetail';
-
 import * as styles from './Todo.module.css';
 
-const Todo = ({ t_data }) => {
-  let [data, setData] = useState(t_data);
+const Todo = ({ data, deleteTodoItem, toggleTodoStatus, setDate }) => {
+  let [toggleDetails, setToggleDetails] = useState(false);
 
-  // Todo : null state [Create New Todo State]
+  // Add New Todo 
   if (data === null) {
     return (
       <div className={styles.Todo}>
@@ -19,25 +17,21 @@ const Todo = ({ t_data }) => {
     )
   }
 
+  // Show Todo Item 
   return (
     <div className={styles.Todo}>
       <div className={styles.TodoItem}>
         <div className={styles.left}>
-          <button className={styles.btn}> = </button>
-          <input className={styles.inputCheck} type="checkbox" name="status" id="status" defaultChecked={data.completed} onChange={() => {
-            // input.classList.toggle(`${styles.completed}`);
-            console.log(this, 'Changed!');
-          }} />
-          <input className={styles.inputText} type="text" name="todoname" id="todoname" value={data.name} />
+          <button className={styles.btn} onClick={() => { setToggleDetails(!toggleDetails) }}> = </button>
+          <input className={styles.inputCheck} type="checkbox" name="status" id="status" defaultChecked={data.completed} onChange={() => toggleTodoStatus(data.id)} />
+          <input className={`${styles.inputText} ${data.completed ? styles.completed : ''}`} type="text" name="todoname" id="todoname" value={data.name} />
         </div>
         <div className={styles.right}>
           {data.date ? <div className={styles.date}>{data.date}</div> : ''}
-          <button className={styles.btn}> ▼ </button>
+          <button className={styles.btn} onClick={() => { setToggleDetails(!toggleDetails) }} > ▼ </button>
         </div>
       </div>
-      <div className={styles.hidden}>
-        <TodoDetail />
-      </div>
+      {toggleDetails ? <TodoDetail data={data} deleteTodoItem={deleteTodoItem} setDate={setDate} /> : ''}
     </div >
   );
 };

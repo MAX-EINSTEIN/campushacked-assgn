@@ -2,21 +2,14 @@ import * as styles from './TodoList.module.css';
 import Todo from './Todo';
 import SplashScreen from './SplashScreen';
 
-const TodoList = () => {
-  let listOfTodos = [
-    { id: 1, name: 'Todo 1', date: '01/08/2021' },
-    { id: 2, name: 'Todo 2' },
-    { id: 3, name: 'Todo 3', date: '01/08/2021', completed: true },
-    { id: 4, name: 'Todo 4', completed: true },
-    null,
-  ]
-
+const TodoList = ({ todoList, deleteTodoItem, toggleTodoStatus, setDate }) => {
   return (
-    <div className='TodoList'>
+    <div className={styles.TodoList}>
       <div className={styles.list}>
-        {listOfTodos.map(todo => <Todo key={todo ? todo.id : 0} t_data={todo}></Todo>)}
-        {!(listOfTodos.length > 1) ? <SplashScreen></SplashScreen> : ''}
+        {todoList.map(todo => <Todo key={todo ? todo.id : 0} data={todo} deleteTodoItem={deleteTodoItem} toggleTodoStatus={toggleTodoStatus} setDate={setDate}></Todo>)}
+        <Todo data={null}></Todo>
       </div>
+      <div className={styles.splashScreen}>{!(todoList.length > 0) ? <SplashScreen /> : ''}</div>
     </div >
   );
 };
